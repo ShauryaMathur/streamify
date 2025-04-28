@@ -1,0 +1,30 @@
+# use glob syntax.
+syntax: glob
+Command Prompt.lnk
+nuget.exe
+*.suo
+*.user
+
+*.sln.DotSettings
+syntax: regexp
+bin/
+bin/Debug
+bin/Release
+obj/
+obj/Debug
+obj/Release
+Packages/
+/TestResults/
+/TDD/
+/obj/
+_ReSharper.*
+*.nupkg
+.DS_Store
+.idea/
+.vs/
+EnvDTE.dll
+
+/trackzy-web/node_modules
+/ChinookDatabase
+/ChinookDatabase.Test
+node_modules

@@ -1,0 +1,23 @@
+version: '3.8'
+name: chinook
+services:
+  #----------------------------------------------------------------------------
+  # PostgreSQL Container
+  # https://hub.docker.com/_/postgres
+  # Commands:
+  #   psql -U chinook chinook
+  #----------------------------------------------------------------------------
+  postgres:
+    image: postgres:15.3-alpine
+    environment:
+      POSTGRES_USER: chinook
+      POSTGRES_PASSWORD: chinook
+      POSTGRES_DB: chinook_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./ChinookDatabase/DataSources/Chinook_PostgreSql.sql:/docker-entrypoint-initdb.d/Chinook_PostgreSql.sql
+      - ./ChinookDatabase/DataSources/Chinook_PostgreSql_AutoIncrementPKs.sql:/docker-entrypoint-initdb.d/Chinook_PostgreSql_AutoIncrementPKs.sql
+      - ./ChinookDatabase/DataSources/Chinook_PostgreSql_SerialPKs.sql:/docker-entrypoint-initdb.d/Chinook_PostgreSql_SerialPKs.sql
+  
+  
