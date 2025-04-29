@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'
 import seoFragment from '../fragments/seo';
 
 const pageFragment = /* GraphQL */ `
