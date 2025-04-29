@@ -24,7 +24,9 @@ _ReSharper.*
 .vs/
 EnvDTE.dll
 
-/trackzy-web/node_modules
+/streamify/node_modules
 /ChinookDatabase
 /ChinookDatabase.Test
 node_modules
+/streamify/.env.local
+/streamify/.env.example
